@@ -92,6 +92,61 @@
       color: #007BFF;
       white-space: pre-wrap;
     }
+
+    /* Style for the container */
+    .image-container {
+      display: flex; /* Use flexbox to arrange items side by side */
+      gap: 10px; /* Add space between the images */
+      justify-content: center; /* Center images horizontally */
+    }
+
+    /* Style for images */
+    .image-container img {
+      width: 300px; /* Set a fixed width for the images */
+      height: auto; /* Maintain aspect ratio */
+      border: 2px solid #ccc; /* Optional: Add a border */
+      border-radius: 5px; /* Optional: Add rounded corners */
+      transition: opacity 0.3s ease; 
+    }
+
+    /* Link overlay style */
+
+
+    /* Hover effect */
+    .scroll-img-container:hover img {
+      opacity: 0.7;  /* Reduce opacity on hover */
+    }
+
+    .scroll-img-container:hover .image-link-overlay {
+      opacity: 1;  /* Show overlay with text on hover */
+    }
+
+    /* Link text style */
+    .image-link-overlay a {
+      color: blue;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Style for the container */
+    .scroll-container {
+      display: flex; /* Arrange items in a row */
+      overflow-x: scroll; /* Enable horizontal scrolling */
+      gap: 10px; /* Space between images */
+      padding: 10px; /* Optional padding */
+      border: 2px solid #ccc; /* Optional border */
+      width: 90%; /* Set the width of the scroll area */
+      margin: 0 auto; /* Center the container on the page */
+    }
+
+    /* Style for images */
+    .scroll-container img {
+      width: 80px; /* Fixed image width */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 5px; /* Optional: Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+    }
     /* About Section */
     .about {
       padding: 50px 20px;
@@ -225,7 +280,7 @@
   <section class="step">
     <h2>Step 1. Capture your space through your phone.</h2>
     <video controls autoplay loop muted width="100%" height="360">
-      <source src="media/input.mp4" type="video/mp4">
+      <source src="media/video/input.mp4" type="video/mp4">
       <p>Your browser does not support HTML video. Please download the video <a href="example-video.mp4">here</a>.</p>
   </video>
   </section>
@@ -233,7 +288,7 @@
   <section class="step">
     <h2>Step 2. We generate a 3D version of your space.</h2>
     <video controls autoplay loop muted width="100%" height="360">
-      <source src="media/3dmodel.mp4" type="video/mp4">
+      <source src="media/video/3dmodel.mp4" type="video/mp4">
       <p>Your browser does not support HTML video. Please download the video <a href="example-video.mp4">here</a>.</p>
   </video>
   </section>
@@ -246,15 +301,52 @@
   <section class="step">
     <h2>Step 4. Generated design based on your input...</h2>
     <video controls autoplay loop muted width="100%" height="360">
-      <source src="media/output.mp4" type="video/mp4">
+      <source src="media/video/output.mp4" type="video/mp4">
       <p>Your browser does not support HTML video. Please download the video <a href="example-video.mp4">here</a>.</p>
   </video>
   </section>
 
   <section class="step">
-    <h2>Step 5. Choose a design which you like and connect to marketplace.</h2>
+    <h2>Step 5. Choose a design which you like and we connect you to marketplace.</h2>
+    <div class="image-container">
+      <img src="media/img/input.jpeg" alt="Chosen design">
+      <img src="media/img/segmentation.png" alt="Segmentation">
+    </div>
+    <div class="scroll-container">
+      <div class="scroll-img-container">
+      <img src="media/img/items/1.png" alt="Image 1">
+      <div class="image-link-overlay">
+        <a href="https://www.example.com" target="_blank">Add to cart</a>
+      </div>
+      </div>
+      <div class="scroll-img-container">
+        <img src="media/img/items/2.png" alt="Image 2">
+        <div class="image-link-overlay">
+          <a href="https://www.example.com" target="_blank">Add to cart</a>
+        </div>
+      </div>
+      <div class="scroll-img-container">
+        <img src="media/img/items/3.png" alt="Image 3">
+        <div class="image-link-overlay">
+          <a href="https://www.example.com" target="_blank">Add to cart</a>
+        </div>
+      </div>
+      <div class="scroll-img-container">
+        <img src="media/img/items/4.png" alt="Image 4">
+        <div class="image-link-overlay">
+          <a href="https://www.example.com" target="_blank">Add to cart</a>
+        </div>
+      </div>
+      <div class="scroll-img-container">
+        <img src="media/img/items/5.png" alt="Image 5">
+        <div class="image-link-overlay">
+          <a href="https://www.example.com" target="_blank">Add to cart</a>
+        </div>
+      </div>
+  </div>
+    <img src="" alt="" width="200">
   </section>
-
+    
   <!-- About Section -->
   <section id="about" class="about">
     <h2>About Us</h2>
